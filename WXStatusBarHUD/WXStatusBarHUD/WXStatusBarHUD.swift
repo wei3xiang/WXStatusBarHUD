@@ -18,6 +18,29 @@ class WXStatusBarHUD:NSObject {
     static var window: UIWindow?
     /** 定时器*/
     static var timer: NSTimer?
+    
+    /** label */
+    class func hudLabel(msg: NSString)->UILabel{
+        let label = UILabel()
+        label.font = UIFont.systemFontOfSize(12)
+        label.frame = window!.bounds
+        label.text = msg as String
+        label.textAlignment = .Center
+        label.textColor = UIColor.whiteColor()
+        return label
+    }
+    
+    /** button */
+    class func hudButton(msg: String,image: UIImage?) -> UIButton{
+        let button = UIButton(type: .Custom)
+        button.setTitle(msg, forState: .Normal)
+        button.titleLabel!.font = UIFont.systemFontOfSize(12)
+        if let img = image{
+            button.setImage(img, forState: .Normal)
+            button.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0)
+        }
+        return button
+    }
 
    /** 显示窗口 */
     class func showWindow(){
@@ -69,13 +92,7 @@ class WXStatusBarHUD:NSObject {
         // 显示窗口
         showWindow()
         // 添加文字
-        let label = UILabel()
-        label.font = UIFont.systemFontOfSize(12)
-        label.frame = window!.bounds
-        label.text = msg as String
-        label.textAlignment = .Center
-        label.textColor = UIColor.whiteColor()
-        window!.addSubview(label)
+        window!.addSubview(hudLabel(msg))
         // 添加圈圈
         let loadingView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
         loadingView.startAnimating()
@@ -95,15 +112,9 @@ class WXStatusBarHUD:NSObject {
         // 显示窗口
         showWindow()
         // 添加按钮
-        let button = UIButton(type: .Custom)
-        button.setTitle(msg, forState: .Normal)
-        button.titleLabel!.font = UIFont.systemFontOfSize(12)
-        if let img = image{
-            button.setImage(img, forState: .Normal)
-            button.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0)
-        }
-        window!.addSubview(button)
+        let button = hudButton(msg, image: image)
         button.frame = window!.bounds
+        window!.addSubview(button)
         timer = NSTimer.scheduledTimerWithTimeInterval(MessageDuration, target: self, selector: Selector("hide"), userInfo: nil, repeats: false)
 
     }
