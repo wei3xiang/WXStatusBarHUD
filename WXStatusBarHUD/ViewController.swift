@@ -12,14 +12,29 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func didClickSuccess(sender: AnyObject) {
+        WXStatusBarHUD.showSuccess("成功")
     }
 
 
+    @IBAction func 普通信息(sender: AnyObject) {
+        WXStatusBarHUD.showMessage("刷新20条")
+    }
+    
+    @IBAction func didClickFailsure(sender: AnyObject) {
+        WXStatusBarHUD.showError("失败")
+    }
+    
+    
+    @IBAction func didClickLoading(sender: AnyObject) {
+        WXStatusBarHUD.showLoading("加载")
+    }
+    
+    @IBAction func didClickHide(sender: AnyObject) {
+        WXStatusBarHUD.hide()
+    }
+    
 }
 

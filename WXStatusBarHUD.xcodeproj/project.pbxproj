@@ -13,6 +13,8 @@
 		CEC2D71C1D4B94E100A4E0EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC2D71B1D4B94E100A4E0EB /* Assets.xcassets */; };
 		CEC2D71F1D4B94E100A4E0EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC2D71D1D4B94E100A4E0EB /* LaunchScreen.storyboard */; };
 		CEC2D72A1D4B94E100A4E0EB /* WXStatusBarHUDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2D7291D4B94E100A4E0EB /* WXStatusBarHUDUITests.swift */; };
+		CEC2D7361D4B951D00A4E0EB /* WXStatusBarHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CEC2D7351D4B951D00A4E0EB /* WXStatusBarHUD.bundle */; };
+		CEC2D7381D4B953900A4E0EB /* WXStatusBarHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2D7371D4B953900A4E0EB /* WXStatusBarHUD.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		CEC2D7251D4B94E100A4E0EB /* WXStatusBarHUDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WXStatusBarHUDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC2D7291D4B94E100A4E0EB /* WXStatusBarHUDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WXStatusBarHUDUITests.swift; sourceTree = "<group>"; };
 		CEC2D72B1D4B94E100A4E0EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEC2D7351D4B951D00A4E0EB /* WXStatusBarHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WXStatusBarHUD.bundle; sourceTree = "<group>"; };
+		CEC2D7371D4B953900A4E0EB /* WXStatusBarHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXStatusBarHUD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		CEC2D7131D4B94E100A4E0EB /* WXStatusBarHUD */ = {
 			isa = PBXGroup;
 			children = (
+				CEC2D7341D4B950000A4E0EB /* WXStatusBarHUD */,
 				CEC2D7141D4B94E100A4E0EB /* AppDelegate.swift */,
 				CEC2D7161D4B94E100A4E0EB /* ViewController.swift */,
 				CEC2D7181D4B94E100A4E0EB /* Main.storyboard */,
@@ -94,6 +99,15 @@
 				CEC2D72B1D4B94E100A4E0EB /* Info.plist */,
 			);
 			path = WXStatusBarHUDUITests;
+			sourceTree = "<group>";
+		};
+		CEC2D7341D4B950000A4E0EB /* WXStatusBarHUD */ = {
+			isa = PBXGroup;
+			children = (
+				CEC2D7351D4B951D00A4E0EB /* WXStatusBarHUD.bundle */,
+				CEC2D7371D4B953900A4E0EB /* WXStatusBarHUD.swift */,
+			);
+			path = WXStatusBarHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +193,7 @@
 			files = (
 				CEC2D71F1D4B94E100A4E0EB /* LaunchScreen.storyboard in Resources */,
 				CEC2D71C1D4B94E100A4E0EB /* Assets.xcassets in Resources */,
+				CEC2D7361D4B951D00A4E0EB /* WXStatusBarHUD.bundle in Resources */,
 				CEC2D71A1D4B94E100A4E0EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC2D7171D4B94E100A4E0EB /* ViewController.swift in Sources */,
+				CEC2D7381D4B953900A4E0EB /* WXStatusBarHUD.swift in Sources */,
 				CEC2D7151D4B94E100A4E0EB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
